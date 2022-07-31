@@ -1,3 +1,6 @@
+
+
+
 const human = {
     name: "John",
 
@@ -6,7 +9,6 @@ const human = {
     }
 };
 
-
 const developer = Object.create(human);
 developer.name = "Developer";
 
@@ -14,7 +16,8 @@ developer.writeCode = () => {
     console.log("writing code");
 }
 
-
 developer.writeCode();
 developer.sayName();
+
+
 
