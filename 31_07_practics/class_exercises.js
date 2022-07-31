@@ -76,3 +76,31 @@ class SMSNotification extends Notification{
 }
 const sms = new SMSNotification();
 sms.send()
+
+/// ---------------- exercises  grel callback function vor@ kashxati promisi pes
+
+function request(isOk, onSuccess, onError ){
+    setTimeout( () => {
+    if(isOk) {
+        console.log("onError")
+        onSuccess(isOk)
+    }else {
+        console.log("onSuccess")
+        onError(isOk)
+    }
+    },2500)
+
+}
+
+request(false, (isOk) => {
+    console.log(isOk);
+    console.log("onSuccess");
+},
+    (isOk) => {
+        console.log(isOk);
+        console.log("onError")
+    });
+
+
+
+
